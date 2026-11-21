@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://myndoselektrik.pages.dev/sitemap.xml
+Sitemap: https://myndoselektrik.com/sitemap.xml

@@ -16,7 +16,7 @@ CFG = dict(
     PHONE_TEL="+905335823201",          # tel: linki (boşluksuz)
     WHATSAPP="905335823201",            # wa.me için, + olmadan
     EMAIL="myndos.elektirik@outlook.com",
-    DOMAIN="https://myndoselektrik.pages.dev",   # sondaki / olmadan
+    DOMAIN="https://myndoselektrik.com",   # sondaki / olmadan
     YEARS=15, JOBS=2500,
     INSTAGRAM="https://www.instagram.com/",
     GOOGLE_MAPS="https://maps.google.com/?q=Bodrum",  # Google İşletme profil linkiniz
