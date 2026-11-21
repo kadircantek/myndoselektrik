@@ -49,6 +49,7 @@ def build(lang):
     t["base"] = base
     t["canonical"] = url(lang)
     t["wa_msg"] = quote(t["wa_text"])
+    t["ver"] = datetime.datetime.now().strftime("%Y%m%d%H%M")
 
     # Language switcher + hreflang
     t["hreflang"] = "\n".join(f'<link rel="alternate" hreflang="{l}" href="{url(l)}">' for l in LANGS) + \
