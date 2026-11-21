@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="description" content="{{desc}}">
+<meta name="keywords" content="{{keywords}}">
+<meta name="author" content="{{BRAND}}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="{{canonical}}">
+{{hreflang}}
+<!-- Local SEO -->
+<meta name="geo.region" content="TR-48">
+<meta name="geo.placename" content="Bodrum, Muğla">
+<meta name="geo.position" content="{{LAT}};{{LNG}}">
+<meta name="ICBM" content="{{LAT}}, {{LNG}}">
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{BRAND}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{desc}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{DOMAIN}}/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="{{locale}}">
+{{og_alt}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{title}}">
+<meta name="twitter:description" content="{{desc}}">
+<meta name="twitter:image" content="{{DOMAIN}}/assets/img/og-image.jpg">
+<!-- App / icons -->
+<meta name="theme-color" content="#06070b">
+<link rel="icon" href="{{base}}assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{base}}assets/img/favicon.svg">
+<link rel="manifest" href="{{base}}site.webmanifest">
+<!-- Performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="{{base}}assets/img/hero.webp" type="image/webp" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;700&display=swap&subset=cyrillic,latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="{{base}}assets/css/style.css">
+{{schema}}
+</head>
+<body>
+<div id="loader" aria-hidden="true"><div class="loader-bulb"></div></div>
+<canvas id="sparks" aria-hidden="true"></canvas>
+<div class="bg-grid" aria-hidden="true"></div>
+
+<div class="topbar"><div class="container"><i class="dot"></i><span>{{topbar}} <a href="tel:{{PHONE_TEL}}">{{PHONE_DISPLAY}}</a></span></div></div>
+
+<header class="header">
+  <nav class="container nav" aria-label="Main">
+    <a href="#top" class="logo" aria-label="{{BRAND}}">
+      <span class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#ffd27a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 00-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0012 3z"/><path d="M12.5 7.5L11 10.5h2l-1.5 3"/></svg></span>
+      <span>{{LOGO_A}}<b>{{LOGO_B}}</b></span>
+    </a>
+    <ul class="menu">
+      <li><a href="#services">{{nav_services}}</a></li>
+      <li><a href="#smart">{{nav_smart}}</a></li>
+      <li><a href="#projects">{{nav_gallery}}</a></li>
+      <li><a href="#areas">{{nav_areas}}</a></li>
+      <li><a href="#faq">{{nav_faq}}</a></li>
+      <li><a href="#contact">{{nav_contact}}</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang" role="navigation" aria-label="Language">{{lang_links}}</div>
+      <a href="tel:{{PHONE_TEL}}" class="btn btn-primary btn-sm nav-call">{{icon_phone}}{{call}}</a>
+      <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"><picture><source srcset="{{base}}assets/img/hero.webp" type="image/webp"><img src="{{base}}assets/img/hero.jpg" alt="" fetchpriority="high" width="1376" height="768"></picture></div>
+    <div class="container hero-grid">
+      <div>
+        <span class="badge"><i></i>{{badge}}</span>
+        <h1>{{h1}}</h1>
+        <p class="lead">{{lead}}</p>
+        <div class="hero-cta">
+          <a href="tel:{{PHONE_TEL}}" class="btn btn-primary">{{icon_phone}}{{cta_call}}</a>
+          <a href="https://wa.me/{{WHATSAPP}}?text={{wa_msg}}" target="_blank" rel="noopener" class="btn btn-ghost">{{icon_wa}}{{cta_wa}}</a>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><strong data-count="{{YEARS}}" data-suffix="+">0</strong><span>{{s_years}}</span></div>
+          <div class="stat"><strong data-count="{{JOBS}}" data-suffix="+">0</strong><span>{{s_jobs}}</span></div>
+          <div class="stat"><strong>7/24</strong><span>{{s_support}}</span></div>
+          <div class="stat"><strong data-count="18" data-suffix="+">0</strong><span>{{s_areas}}</span></div>
+        </div>
+      </div>
+      <div class="bulb-stage" aria-hidden="false">
+        <div class="orbit"></div><div class="orbit o2"></div>
+        <div class="bulb-halo"></div>
+        <div class="bulb-swing" role="button" tabindex="0" aria-label="{{bulb_hint}}">
+          <div class="cord"></div>
+          <svg class="bulb-svg" viewBox="0 0 120 190" aria-hidden="true">
+            <defs>
+              <radialGradient id="glassGrad" cx="50%" cy="40%" r="60%">
+                <stop offset="0%" stop-color="#fffbe8"/><stop offset="45%" stop-color="#ffd877"/><stop offset="100%" stop-color="#ff9a1f" stop-opacity=".85"/>
+              </radialGradient>
+              <linearGradient id="capGrad" x1="0" x2="1"><stop offset="0" stop-color="#6b5a3a"/><stop offset=".5" stop-color="#e8cf8f"/><stop offset="1" stop-color="#5a4a2c"/></linearGradient>
+              <filter id="fglow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <rect x="44" y="0" width="32" height="10" rx="2" fill="url(#capGrad)"/>
+            <rect x="40" y="10" width="40" height="8" rx="3" fill="url(#capGrad)"/>
+            <rect x="40" y="19" width="40" height="8" rx="3" fill="url(#capGrad)"/>
+            <rect x="40" y="28" width="40" height="8" rx="3" fill="url(#capGrad)"/>
+            <path class="bulb-glass" d="M42 38 h36 c0 14 30 30 30 70 a48 48 0 01-96 0 c0-40 30-56 30-70z"/>
+            <path d="M30 80 q-8 30 8 55" stroke="#fff" stroke-opacity=".55" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path class="filament" d="M52 40 L50 95 M68 40 L70 95 M50 95 q3 -14 6 0 q3 14 6 0 q3 -14 6 0 q2 10 2 0"/>
+          </svg>
+        </div>
+        <div class="bulb-hint">💡 {{bulb_hint}}</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="led-strip" aria-hidden="true"></div>
+  <div class="ticker" aria-label="{{ar_k}}"><div class="ticker-track">{{ticker}}</div></div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="kicker">{{sv_k}}</span>
+        <h2>{{sv_t}}</h2>
+        <p>{{sv_p}}</p>
+      </div>
+      <div class="services">{{services_html}}</div>
+    </div>
+  </section>
+
+  <div class="led-strip cyan" aria-hidden="true"></div>
+
+  <!-- SMART HOME -->
+  <section id="smart">
+    <div class="container smart">
+      <div class="reveal">
+        <div class="room on-living">
+          <picture><source srcset="{{base}}assets/img/smart-home.webp" type="image/webp"><img src="{{base}}assets/img/smart-home.jpg" alt="{{sm_k}} – Bodrum villa" loading="lazy" width="1376" height="768"></picture>
+          <div class="shade"></div>
+          <div class="zone z-led"></div><div class="zone z-living"></div><div class="zone z-garden"></div><div class="zone z-pool"></div>
+          <span class="room-tag">● {{room_tag}}</span>
+        </div>
+      </div>
+      <div class="reveal d2">
+        <span class="kicker">{{sm_k}}</span>
+        <h2 class="h2">{{sm_t}}</h2>
+        <p style="color:var(--muted)">{{sm_p}}</p>
+        <ul class="checklist"><li>{{sm_1}}</li><li>{{sm_2}}</li><li>{{sm_3}}</li><li>{{sm_4}}</li></ul>
+        <div class="panel">
+          <div class="panel-top"><b>{{pn_t}}</b><small>{{pn_on}}</small></div>
+          <div class="toggles">
+            <button class="tgl" data-zone="living" aria-pressed="true"><i class="sw"></i><span>{{z_living}}</span></button>
+            <button class="tgl" data-zone="led" aria-pressed="false"><i class="sw"></i><span>{{z_led}}</span></button>
+            <button class="tgl" data-zone="garden" aria-pressed="false"><i class="sw"></i><span>{{z_garden}}</span></button>
+            <button class="tgl" data-zone="pool" aria-pressed="false"><i class="sw"></i><span>{{z_pool}}</span></button>
+          </div>
+          <div class="scenes">
+            <button data-scene="movie">{{sc_movie}}</button><button data-scene="dinner">{{sc_dinner}}</button><button data-scene="all">{{sc_all}}</button><button data-scene="off">{{sc_off}}</button>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem">{{sm_cta}} →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why" style="padding-top:0">
+    <div class="container">
+      <div class="sec-head reveal"><span class="kicker">{{wy_k}}</span><h2>{{wy_t}}</h2></div>
+      <div class="why">
+        <div class="item reveal"><span class="big">01</span><h3>{{w1t}}</h3><p>{{w1p}}</p></div>
+        <div class="item reveal d1"><span class="big">02</span><h3>{{w2t}}</h3><p>{{w2p}}</p></div>
+        <div class="item reveal d2"><span class="big">03</span><h3>{{w3t}}</h3><p>{{w3p}}</p></div>
+        <div class="item reveal d3"><span class="big">04</span><h3>{{w4t}}</h3><p>{{w4p}}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="led-strip" aria-hidden="true"></div>
+
+  <!-- GALLERY -->
+  <section id="projects">
+    <div class="container">
+      <div class="sec-head reveal"><span class="kicker">{{gl_k}}</span><h2>{{gl_t}}</h2><p>{{gl_p}}</p></div>
+      <div class="gallery">{{gallery_html}}</div>
+    </div>
+  </section>
+
+  <!-- AREAS -->
+  <section id="areas" style="padding-top:0">
+    <div class="container">
+      <div class="sec-head reveal"><span class="kicker">{{ar_k}}</span><h2>{{ar_t}}</h2><p>{{ar_p}}</p></div>
+      <div class="areas reveal">{{areas_html}}</div>
+      <p class="area-text reveal">{{ar_text}}</p>
+    </div>
+  </section>
+
+  <div class="led-strip cyan" aria-hidden="true"></div>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="sec-head reveal"><span class="kicker">{{fq_k}}</span><h2>{{fq_t}}</h2></div>
+      <div class="faq">{{faq_html}}</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="padding-top:0">
+    <div class="container">
+      <div class="sec-head reveal"><span class="kicker">{{ct_k}}</span><h2>{{ct_t}}</h2><p>{{ct_p}}</p></div>
+      <div class="contact">
+        <div class="c-info reveal">
+          <a class="c-row" href="tel:{{PHONE_TEL}}"><span class="ico">{{icon_phone}}</span><span><small>{{c_phone}}</small><b>{{PHONE_DISPLAY}}</b></span></a>
+          <a class="c-row" href="https://wa.me/{{WHATSAPP}}?text={{wa_msg}}" target="_blank" rel="noopener"><span class="ico" style="color:#25d366">{{icon_wa}}</span><span><small>{{c_wa}}</small><b>{{PHONE_DISPLAY}}</b></span></a>
+          <a class="c-row" href="mailto:{{EMAIL}}"><span class="ico">{{icon_mail}}</span><span><small>{{c_mail}}</small><b>{{EMAIL}}</b></span></a>
+          <div class="c-row"><span class="ico">{{icon_pin}}</span><span><small>{{c_area}}</small><b>{{c_area_v}}</b></span></div>
+          <div class="c-row"><span class="ico">{{icon_clock}}</span><span><small>{{c_hours}}</small><b>{{c_hours_v}}</b></span></div>
+        </div>
+        <form id="contactForm" class="form reveal d2" data-wa="{{WHATSAPP}}" data-hello="{{f_hello}}" data-lname="{{f_name}}" data-lphone="{{f_phone}}" data-lservice="{{f_service}}" data-lmsg="{{f_msg}}">
+          <div class="row">
+            <div><label for="fn">{{f_name}}</label><input id="fn" name="name" required autocomplete="name"></div>
+            <div><label for="fp">{{f_phone}}</label><input id="fp" name="phone" type="tel" required autocomplete="tel"></div>
+          </div>
+          <label for="fs">{{f_service}}</label>
+          <select id="fs" name="service">{{service_options}}</select>
+          <label for="fm">{{f_msg}}</label>
+          <textarea id="fm" name="message" placeholder="{{f_ph_msg}}"></textarea>
+          <button class="btn btn-primary" type="submit">{{icon_wa}}{{f_send}}</button>
+        </form>
+      </div>
+      <div class="map" data-src="https://maps.google.com/maps?q=Bodrum%2C%20Mu%C4%9Fla&t=&z=11&ie=UTF8&iwloc=&output=embed" data-title="{{map_title}}"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <a href="#top" class="logo" style="margin-bottom:1rem"><span class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#ffd27a" stroke-width="1.8" stroke-linecap="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 00-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0012 3z"/></svg></span><span>{{LOGO_A}}<b>{{LOGO_B}}</b></span></a>
+        <p>{{ft_about}}</p>
+        <p style="margin-top:1rem"><a href="tel:{{PHONE_TEL}}" style="color:var(--amber);font-weight:800">{{PHONE_DISPLAY}}</a></p>
+      </div>
+      <div><h4>{{ft_services}}</h4><ul>{{footer_services}}</ul></div>
+      <div><h4>{{ft_areas}}</h4><ul>{{footer_areas}}</ul></div>
+    </div>
+    <p class="seo-text">{{seo}}</p>
+    <div class="copy"><span>© <span data-year></span> {{BRAND}} – {{rights}}</span><span class="lang">{{lang_links}}</span></div>
+  </div>
+</footer>
+
+<div class="fab">
+  <a class="wa" href="https://wa.me/{{WHATSAPP}}?text={{wa_msg}}" target="_blank" rel="noopener" aria-label="WhatsApp" style="color:#fff">{{icon_wa}}</a>
+  <a class="tel" href="tel:{{PHONE_TEL}}" aria-label="{{call}}" style="color:#140d00">{{icon_phone}}</a>
+</div>
+<div class="mobile-bar">
+  <a class="m-tel" href="tel:{{PHONE_TEL}}">{{icon_phone}}{{call}}</a>
+  <a class="m-wa" href="https://wa.me/{{WHATSAPP}}?text={{wa_msg}}" target="_blank" rel="noopener">{{icon_wa}}WhatsApp</a>
+</div>
+
+<div class="lightbox" role="dialog" aria-modal="true"><button class="lb-close" aria-label="Close">×</button><div><img src="data:," alt=""><p></p></div></div>
+
+<script src="{{base}}assets/js/main.js" defer></script>
+</body>
+</html>

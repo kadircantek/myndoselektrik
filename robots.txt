@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://myndoselektrik.pages.dev/sitemap.xml
